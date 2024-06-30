@@ -24,7 +24,7 @@ import { useRouter } from 'next/navigation'
 function AddNewInterview() {
     const [openDailog, setOpenDailog]= useState(false)
     const [jobPosition, setJobPosition] = useState();
-    const [jobDesc, setJobDesc] = useState();
+    const [jobDesc, Desc] = useState();
     const [jobExperience, setJobExperience] = useState();
     const [loading,setLoading]=useState(false);
     const [JsonResponse, setJsonResponse] = useState([]);
@@ -50,7 +50,7 @@ function AddNewInterview() {
             jsonMockResp:MockJsonResp,
             jobPosition:jobPosition,
             jobDesc:jobDesc,
-            jobEeperience:jobExperience,
+           jobExperience:jobExperience,
             createdBy:user?.primaryEmailAddress?.emailAddress,
             createdAt:moment().format('DD-MM-yyyy')
         }).returning({mockId:MockInterview.mockId});
