@@ -76,7 +76,7 @@ function AddNewInterview() {
       
   return (
     <div>
-      <div className="p-10 border rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 hover:shadow-2xl cursor-pointer transition-all transform duration-500 ease-in-out"
+      <div className="p-10 border rounded-lg bg-gradient-to-r from-green-400 to-blue-500 hover:scale-105 hover:shadow-2xl cursor-pointer transition-all transform duration-500 ease-in-out gap-6"
       onClick={() => setOpenDailog(true)}
       >
         <h2 className='font-bold text-lg text-nowrap text-center text-white'>+ Add New</h2>
@@ -87,30 +87,30 @@ function AddNewInterview() {
       <DialogTitle className="text-2xl text-indigo-700">Tell us more about your job interviwing</DialogTitle>
       <DialogDescription>
       <form onSubmit={onSubmit}>
-        <div>
-            <h2>Add Details about your job position/role,Job description and year of experiance.</h2>
+      <div>
+                   
+                   <h2 className='text-black text-lg'>Add Details about yout job position/role, Job description and years of experience</h2>
 
-            <div className='my-4'>
-                <label >Job Role/Job position</label>
-                    <Input className='mt-2' placeholder="Ex. Full Stack Developer" required
-                        onChange={(event)=>setJobPosition (event.target.value)}
-                    />
-        
-            </div>
-            <div className='my-4'>
-                <label>Job Description / Skill (In Short) </label>
-                    <Textarea className='mt-2' placeholder="Ex. React, Javascript, Java, NodeJs etc." required
-                        onChange={(event)=>setJobDesc (event.target.value)}
-                    />
-                
-            </div>
-            <div className='my-4'>
-                <label> Years of Experiance</label>
-                    <Input className='mt-2' placeholder="Ex.3" type="number" max="100" required
-                        onChange={(event)=>setJobExperience (event.target.value)}
-                    />
-            </div>
-        </div>
+                   <div className='mt-7 my-3'>
+                       <label>Job Role/Job Position</label>
+                       <Input className='m-3' placeholder="Ex. Full Stack Developer" required
+                       onChange={(event)=>setJobPosition(event.target.value)}
+                       />
+                   </div>
+                   <div className=' my-3'>
+                       <label>Job Description/ Tech Stack (In Short)</label>
+                       <Textarea className='m-3' placeholder="Ex. React, Angular, NodeJs, MySql etc" 
+                       required
+                       onChange={(event)=>setJobDesc(event.target.value)} />
+                   </div>
+                   <div className=' my-3'>
+                       <label >Years of experience</label>
+                       <Input className='m-3' placeholder="Ex.5"  type="number"  max="100" 
+                       required
+                       onChange={(event)=>setJobExperience(event.target.value)}
+                       />
+                   </div>
+               </div>
         <div className='flex gap-5 justify-end' >
             <Button type="button" variant="ghost" onClick={()=>setOpenDailog(false)}>Cancel</Button>
             <Button type="submit" disabled={loading} className="bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105">

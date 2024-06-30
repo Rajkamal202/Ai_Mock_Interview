@@ -32,7 +32,12 @@ function Feedback({ params }) {
 
   return (
     <div className="p-10 bg-gradient-to-br from-white to-gray-100 rounded-xl shadow-2xl m-7 transform transition-transform duration-500 hover:scale-105">
-      <div className="mb-8">
+ 
+        {feedbackList?.length==0?
+        <h2 className='font-bold text-xl text-green-500'>No Interview Feedback Record Found </h2>
+          :
+        <>
+        <div className="mb-8">
         <h2 className="text-4xl font-extrabold text-green-700 mb-4 animate-pulse">Congratulations!</h2>
         <h2 className="font-bold text-3xl text-gray-900 mb-6 animate-bounce">Here is your interview feedback</h2>
         <h2 className="text-purple-800 text-lg my-3">
@@ -41,7 +46,9 @@ function Feedback({ params }) {
         <p className="text-md text-gray-700 mt-4">
           Find below the interview questions with correct answers, your answers, and feedback for improvement.
         </p>
-      </div>
+        </div>
+
+
       {feedbackList && feedbackList.map((item, index) => (
         <Collapsible key={index} className="mt-7">
           <CollapsibleTrigger className="p-4 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-lg my-2 text-left flex justify-between gap-7 w-full text-white hover:bg-gradient-to-l transform transition-all duration-500 hover:scale-105 shadow-lg hover:shadow-2xl">
@@ -65,6 +72,8 @@ function Feedback({ params }) {
           </CollapsibleContent>
         </Collapsible>
       ))}
+
+      </>}
       <Button onClick={() => router.replace('/dashboard')} className="mt-10 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-green-400 focus:ring-opacity-50">
         Go Home
       </Button>
