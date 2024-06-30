@@ -24,7 +24,7 @@ import { useRouter } from 'next/navigation'
 function AddNewInterview() {
     const [openDailog, setOpenDailog]= useState(false)
     const [jobPosition, setJobPosition] = useState();
-    const [jobDesc, Desc] = useState();
+    const [jobDesc, setJobDesc] = useState();
     const [jobExperience, setJobExperience] = useState();
     const [loading,setLoading]=useState(false);
     const [JsonResponse, setJsonResponse] = useState([]);
@@ -106,6 +106,7 @@ function AddNewInterview() {
                    <div className=' my-3'>
                        <label >Years of experience</label>
                        <Input className='m-3' placeholder="Ex.5"  type="number"  max="100" 
+                       required
                        onChange={(event)=>setJobExperience(event.target.value)}
                        />
                    </div>
