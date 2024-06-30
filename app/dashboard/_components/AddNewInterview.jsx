@@ -106,7 +106,6 @@ function AddNewInterview() {
                    <div className=' my-3'>
                        <label >Years of experience</label>
                        <Input className='m-3' placeholder="Ex.5"  type="number"  max="100" 
-                       required
                        onChange={(event)=>setJobExperience(event.target.value)}
                        />
                    </div>
