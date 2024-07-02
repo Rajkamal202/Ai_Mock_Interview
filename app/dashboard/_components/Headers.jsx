@@ -12,9 +12,9 @@ function Headers() {
         <div>
         <nav>
           <ul className='flex gap-11 justify-center items-center ml-12'>
+            <li className='text-lg font-sans border border-sold border-blue-300 rounded-3xl p-1 pl-7 pr-7 shadow-md cursor-pointer hover:bg-blue-400 hover:font-semibold hover:text-blue-800 hover:shadow-lg '>About Us</li>
             <li className='text-lg font-sans border border-sold border-blue-300 rounded-3xl p-1 pl-7 pr-7 shadow-md cursor-pointer hover:bg-blue-400 hover:font-semibold hover:text-blue-800 hover:shadow-lg '>Home</li>
-            <li className='text-lg font-sans border border-sold border-blue-300 rounded-3xl p-1 pl-7 pr-7 shadow-md cursor-pointer hover:bg-blue-400 hover:font-semibold hover:text-blue-800 hover:shadow-lg '>Questions</li>
-            <li className='text-lg font-sans border border-sold border-blue-300 rounded-3xl p-1 pl-7 pr-7  shadow-md cursor-pointer hover:bg-blue-400 hover:font-semibold hover:text-blue-800 hover:shadow-lg '>About Us</li>
+            <li className='text-lg font-sans border border-sold border-blue-300 rounded-3xl p-1 pl-7 pr-7  shadow-md cursor-pointer hover:bg-blue-400 hover:font-semibold hover:text-blue-800 hover:shadow-lg '>Questions</li>
           </ul>
         </nav>
         </div>
